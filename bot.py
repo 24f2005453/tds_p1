@@ -28,9 +28,9 @@ from fastapi import FastAPI
 from fastapi.responses import FileResponse, PlainTextResponse
 
 # ---------------------------------------------------------------- config
-BOT_TOKEN = os.environ.get("BOT_TOKEN", "8921549217:AAGoc2Yz6uZN4_FobENTmvf9CymCiJ5AAe0")
-AIPIPE_TOKEN = os.environ.get("AIPIPE_TOKEN", "eyJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6IjI0ZjIwMDU0NTNAZHMuc3R1ZHkuaWl0bS5hYy5pbiIsImlhdCI6MTc4NDkwODQ0NCwiaXNzIjoiaHR0cHM6Ly9haXBpcGUub3JnIiwiYXVkIjoiYWlwaXBlLWFwaSIsImV4cCI6MTc4NTUxMzI0NH0.9SSmp9bL_of95id2rAX8R1PFDu2Y1y9_ms4qCQCGn2g")
-MODEL = os.environ.get("MODEL", "gpt-4o-mini")
+BOT_TOKEN = os.environ["BOT_TOKEN"]
+AIPIPE_TOKEN = os.environ["AIPIPE_TOKEN"]
+MODEL = os.environ.get("MODEL", "gpt-4o")
 MODEL_BASE_URL = os.environ.get("MODEL_BASE_URL", "https://aipipe.org/openai/v1")
 BASE_URL = os.environ.get("BASE_URL", "https://tds-p1-tele.onrender.com").rstrip("/")
 LOG_PATH = os.environ.get("LOG_PATH", "/tmp/run.jsonl")
